@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: license-api
+    env: php
+    buildCommand: ""
+    startCommand: php -S 0.0.0.0:$PORT check_license.php
+    plan: free
+    envVars:
+      LICENSE_KEY: 
+        fromSecret: LICENSE_KEY_SECRET  
